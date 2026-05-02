@@ -10,9 +10,9 @@ RUN git clone --depth 1 --branch ${MIKE_GIT_REF} https://github.com/willchen96/m
 WORKDIR /app
 RUN cp -r /tmp/mike/frontend/. . && rm -rf /tmp/mike
 
-ARG NEXT_PUBLIC_SUPABASE_URL
-ARG NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY
-ARG NEXT_PUBLIC_API_BASE_URL
+ARG NEXT_PUBLIC_SUPABASE_URL=https://placeholder.supabase.co
+ARG NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY=placeholder
+ARG NEXT_PUBLIC_API_BASE_URL=http://localhost:3001
 
 RUN npm install --legacy-peer-deps
 RUN npm run build
