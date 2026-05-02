@@ -14,7 +14,7 @@ ARG NEXT_PUBLIC_SUPABASE_URL
 ARG NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY
 ARG NEXT_PUBLIC_API_BASE_URL
 
-RUN npm install
+RUN npm install --legacy-peer-deps
 RUN npm run build
 
 FROM node:22-bookworm-slim
